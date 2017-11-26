@@ -44,4 +44,4 @@ Route::get('/debug', function () {
 });
 
 
-
+Route::get('/chores', 'ChoresController@index');
