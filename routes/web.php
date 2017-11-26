@@ -45,3 +45,6 @@ Route::get('/debug', function () {
 
 
 Route::get('/chores', 'ChoresController@index');
+
+
+Route::post('/create/chore', 'ChoresController@store');

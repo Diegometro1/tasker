@@ -17,6 +17,24 @@ class ChoresController extends Controller
 
         return view('layouts.chores')->with('chores', $chores);
 
+
+    }
+
+
+    public function store(Request $request)
+    {
+
+        //dd($request->all());
+
+        $chore = new Chore;
+
+        $chore->chore = $request->chore;
+
+        $chore ->save();
+
+
+
+        return redirect()->back();
     }
 
 }
