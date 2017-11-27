@@ -11,8 +11,11 @@
 
 
             <form action="/create/chore" method="post">
+
+                {{ csrf_field() }}
+
                 <input type="text" class="form-control input-lg" name="chore" placeholder="Create a new chore">
-                    {{ csrf_field() }}
+
 
 
             </form>

@@ -75,11 +75,15 @@ class ChoresController extends Controller
     public function save(Request $request, $id)
     {
 
-        dump($request->all());
+        //dump($request->all());
 
+        $chore = Chore::find($id);
 
+        $chore->chore = $request->chore;
 
+        $chore->save();
 
+        return redirect()->route('chore');
     }
 
 
