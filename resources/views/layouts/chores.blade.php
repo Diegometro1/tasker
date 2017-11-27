@@ -24,9 +24,13 @@
 
     @foreach($chores as $chore)
 
-        {{ $chore -> chore }} <a href="" class="btn btn-danger"> x </a>
+        {{ $chore -> chore }} <a href="{{ route('chore.delete', ['id' => $chore->id]) }}" class="btn btn-danger"> x </a>
 
-    <hr>
+        <a href="{{ route('chore.update', ['id' => $chore->id]) }}" class="btn btn-info btn-xs"> update </a>
+
+
+
+        <hr>
 
     @endforeach
 

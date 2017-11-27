@@ -37,4 +37,51 @@ class ChoresController extends Controller
         return redirect()->back();
     }
 
+
+
+    public function delete($id)
+    {
+
+        //dump($id);
+
+
+        $chore = Chore::find($id);
+
+
+        $chore->delete();
+
+
+        return redirect()->back();
+
+
+    }
+
+
+    public function update($id)
+    {
+
+        //dump($id);
+
+
+        $chore = Chore::find($id);
+
+
+        return view('layouts.update')->with('chore', $chore );
+
+
+    }
+
+
+    public function save(Request $request, $id)
+    {
+
+        dump($request->all());
+
+
+
+
+    }
+
+
+
 }

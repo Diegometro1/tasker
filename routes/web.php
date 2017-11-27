@@ -47,4 +47,48 @@ Route::get('/debug', function () {
 Route::get('/chores', 'ChoresController@index');
 
 
+
+
+
+Route::get('/chore/delete/{id}', [
+
+    'uses' =>'ChoresController@delete',
+
+    'as' =>'chore.delete'
+
+
+]);
+
+
+
+
+
+Route::get('/chore/update/{id}', [
+
+    'uses' =>'ChoresController@update',
+
+    'as' =>'chore.update'
+
+
+]);
+
+
+
+
+
+Route::post('/chore/save/{id}', [
+
+    'uses' =>'ChoresController@save',
+
+    'as' =>'chore.save'
+
+
+]);
+
+
+
+
+
+
+
 Route::post('/create/chore', 'ChoresController@store');
