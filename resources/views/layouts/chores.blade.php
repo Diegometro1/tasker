@@ -10,7 +10,7 @@
         <div class="col-lg-6 col-lg-offset-3">
 
 
-            <form action="/create/chore" method="post">
+            <form action="create/chore" method="post">
 
                 {{ csrf_field() }}
 
@@ -32,10 +32,23 @@
         <a href="{{ route('chore.update', ['id' => $chore->id]) }}" class="btn btn-info btn-xs"> update </a>
 
 
+        @if(!$chore -> completed)
+
+            <a href="{{ route('chore.completed',[ 'id' => $chore->id]) }}" class="btn btn-xs btn-success">Mark as Completed</a>
+        @else
+
+
+            <span class="text-success">Completed!!</span>
+
+
+        @endif
+
+
+
 
         <hr>
 
     @endforeach
 
 
-    @stop
+@stop

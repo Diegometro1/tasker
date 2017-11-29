@@ -51,6 +51,7 @@ Route::get('/chore', [
 ]);
 
 
+Route::get('/chore', 'ChoresController@index');
 
 
 
@@ -90,6 +91,13 @@ Route::post('/chore/save/{id}', [
 ]);
 
 
+Route::get('/chore/completed/{$id}', [
+
+    'uses' => 'ChoresController@completed',
+
+    'as' => 'chore.completed'
+
+]);
 
 
 

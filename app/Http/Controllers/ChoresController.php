@@ -12,13 +12,13 @@ class ChoresController extends Controller
     public function index()
     {
 
-        $chores = Chore::all();
+        $chore = Chore::all();
 
 
-        return view('layouts.chores')->with('chores', $chores);
-
+        return view('layouts.chores')->with('chores', $chore);
 
     }
+
 
 
     public function store(Request $request)
@@ -85,6 +85,25 @@ class ChoresController extends Controller
 
         return redirect()->route('chore');
     }
+
+
+
+
+    public function completed($id)
+    {
+
+
+
+        $chore = Chore::find($id);
+
+        $chore->completed = 1;
+
+        $chore->save();
+
+        return redirect()->back();
+        //route('chore');
+    }
+
 
 
 
