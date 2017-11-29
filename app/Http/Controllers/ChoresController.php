@@ -32,8 +32,6 @@ class ChoresController extends Controller
 
         $chore ->save();
 
-
-
         return redirect()->back();
     }
 
@@ -44,12 +42,9 @@ class ChoresController extends Controller
 
         //dump($id);
 
-
         $chore = Chore::find($id);
 
-
         $chore->delete();
-
 
         return redirect()->back();
 
@@ -62,9 +57,7 @@ class ChoresController extends Controller
 
         //dump($id);
 
-
         $chore = Chore::find($id);
-
 
         return view('layouts.update')->with('chore', $chore );
 
@@ -91,8 +84,6 @@ class ChoresController extends Controller
 
     public function completed($id)
     {
-
-
 
         $chore = Chore::find($id);
 

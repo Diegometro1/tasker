@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1><a href="/layouts/chores">THIS IS CSCIE-15</a></h1>
+    <h1><a href="/chore">THIS IS CSCIE-15</a></h1>
 
    @stop
 

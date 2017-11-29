@@ -51,7 +51,9 @@ Route::get('/chore', [
 ]);
 
 
-Route::get('/chore', 'ChoresController@index');
+//Route::get('/chore'ChoresController@index
+//
+//]);
 
 
 
