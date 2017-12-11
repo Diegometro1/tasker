@@ -36,7 +36,7 @@ class ChoresController extends Controller
         $chore ->save();
 
 
-        Session::flash('success', 'Your Chore has been created');
+        Session::flash('success', 'Your Chore has been created' );
 
 
 
@@ -56,7 +56,7 @@ class ChoresController extends Controller
         $chore->delete();
 
 
-        Session::flash('success', 'Your Chore has been deleted');
+        Session::flash('success',  'Your Chore has been deleted');
 
 
         return redirect()->back();
@@ -91,7 +91,7 @@ class ChoresController extends Controller
 
 
 
-        Session::flash('success', 'Your Chore has been update');
+        Session::flash('success',  'Your Chore has been update');
 
 
         return redirect()->route('chore');
@@ -110,7 +110,7 @@ class ChoresController extends Controller
         $chore->save();
 
 
-        Session::flash('success', 'Your Chore has been mark as completed');
+        Session::flash('success', 'Your Chore has been mark as completed' );
 
 
         return redirect()->back();
