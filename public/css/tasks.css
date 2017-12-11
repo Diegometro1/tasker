@@ -1,0 +1,53 @@
+body{
+
+    margin: 200px;
+    padding: 100px;
+    background-color: lightskyblue;
+
+
+}
+
+ div.intro {
+
+     border: double;
+     margin: 70px;
+     padding: 100px;
+     background-color: #eea236;
+
+
+}
+
+ h1.welcome{
+     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     font-stretch: extra-expanded;
+ }
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+
+a:link{
+    color: red;
+    font-size: 25px;
+}
+
+a:visited{
+    color: #ad4844;
+}
+
+a:hover{
+    color: #1f648b ;
+}
+
+a:active{
+    color:blue;
+}

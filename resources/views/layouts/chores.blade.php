@@ -14,7 +14,7 @@
 
                 {{ csrf_field() }}
 
-                <input type="text" class="form-control input-lg" name="chore" placeholder="Create a new chore">
+                <input type="text" class="form-control input-lg" name="chore" placeholder="Create a new chore and press enter">
 
 
 
