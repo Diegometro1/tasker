@@ -11,6 +11,6 @@ class ChoresTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Chore::class, 7)->create();
+        factory(App\Chore::class, 10)->create();
     }
 }

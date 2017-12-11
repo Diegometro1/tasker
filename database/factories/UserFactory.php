@@ -30,7 +30,7 @@ $factory->define(App\Chore::class, function(Faker $faker){
 
     return [
 
-        'chore' => $faker -> sentence(10)
+        'chore' => $faker -> sentence(6)
 
 
     ];

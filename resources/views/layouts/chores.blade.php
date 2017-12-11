@@ -35,6 +35,7 @@
         @if(!$chore -> completed)
 
             <a href="{{ route('chore.completed',[ 'id' => $chore->id]) }}" class="btn btn-xs btn-success">Mark as Completed</a>
+
         @else
 
 

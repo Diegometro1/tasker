@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Chore;
+use Session;
+
+
 
 class ChoresController extends Controller
 {
@@ -32,6 +35,12 @@ class ChoresController extends Controller
 
         $chore ->save();
 
+
+        Session::flash('success', 'Your Chore has been created');
+
+
+
+
         return redirect()->back();
     }
 
@@ -45,6 +54,10 @@ class ChoresController extends Controller
         $chore = Chore::find($id);
 
         $chore->delete();
+
+
+        Session::flash('success', 'Your Chore has been deleted');
+
 
         return redirect()->back();
 
@@ -76,6 +89,11 @@ class ChoresController extends Controller
 
         $chore->save();
 
+
+
+        Session::flash('success', 'Your Chore has been update');
+
+
         return redirect()->route('chore');
     }
 
@@ -90,6 +108,10 @@ class ChoresController extends Controller
         $chore->completed = 1;
 
         $chore->save();
+
+
+        Session::flash('success', 'Your Chore has been mark as completed');
+
 
         return redirect()->back();
         //route('chore');
