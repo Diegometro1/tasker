@@ -14,11 +14,22 @@
 
                 {{ csrf_field() }}
 
-                <input type="text" class="form-control input-lg" name="chore" placeholder="Create a new chore and press enter">
+                <input type="text" class="form-control input-lg" name="chore" id="chore" value="{{ old('chore') }}" placeholder="Create a new chore and press enter">
 
 
 
             </form>
+
+            {{--{{ dump($errors) }}--}}
+
+            @if(count($errors) > 0)
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                </ul>
+            @endif
+
         </div>
 
 

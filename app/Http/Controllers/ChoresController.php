@@ -29,6 +29,14 @@ class ChoresController extends Controller
 
         //dd($request->all());
 
+        $this->validate($request,[
+            //'chore' => 'required|min:4'
+            'chore' => 'required|regex:/^[\pL\s\-]+$/u|max:255|min:4|unique:chores',
+
+
+        ]);
+
+
         $chore = new Chore;
 
         $chore->chore = $request->chore;
@@ -37,9 +45,6 @@ class ChoresController extends Controller
 
 
         Session::flash('success', 'Your Chore has been created' );
-
-
-
 
         return redirect()->back();
     }
